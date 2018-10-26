@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/register.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/vue-router.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/qs.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p class="mt-4"><a href="index.html" class="text-muted ml-2"><span class="fa fa-home text-muted mr-2"></span><small>返回首页</small></a></p>
+        <div id="register-box" class="m-auto pt-5">
+            <p class="text-center"><img src="img/logov5-2.png" class="w-50"/></p>
+            <div class="mt-5">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-mobile-phone fa-3x p-0 px-3 bg-transparent"></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="手机号码" v-model="phone">
+                </div>
+                <p class="text-danger" v-show="!phone_isshow">请输入11位手机号码</p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-barcode fa-2x p-0 px-3 py-2 bg-transparent"></span>
+                    </div>
+                    <input type="text" class="form-control px-0" placeholder="验证码" value="123456">
+                    <div class="input-group-append">
+                        <a href="#" class="input-group-text bg-transparent text-muted">获取验证码</a>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-user fa-2x p-0 px-3 py-2 bg-transparent"></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="用户名" v-model="uname">
+                </div>
+                <p class="text-danger" v-show="!uname_isshow">用户名不能为空</p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text fa fa-key fa-2x p-0 px-3 py-2 bg-transparent"></span>
+                    </div>
+                    <input type="password" class="form-control px-0" placeholder="请输入6-16位密码" v-model="upwd">
+                </div>
+                <p class="text-danger" v-show="!upwd_isshow">请输入6-16位密码</p>
+                <ul class="list-unstyled pull-right">
+		            	<li>已注册，<a href="login.html" class="text-muted">立即登录</a></li>
+		         </ul>
+		         <button class="btn btn-block btn-register text-white" id="sub" @click="sub">注册</button>
+		         <button class="btn btn-block mt-4 btn-email">邮箱注册</button>	        
+            </div>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

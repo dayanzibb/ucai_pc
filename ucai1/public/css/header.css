@@ -1,0 +1,55 @@
+@media screen and (max-width:1200px){
+	.top_nav{
+		display: none;
+	}
+}
+@media screen and (max-width:1200px) and (min-width:992px){
+	.container>nav.navbar>img{
+		margin-right: 1rem !important;
+	}
+	.container>nav.navbar>div>ul>li{
+		margin-left: 0.5rem !important;
+	}
+}
+@media screen and (max-width:992px){
+	.container{
+		max-width:100% !important;
+	}
+	.container>nav.navbar>div>ul>li:last-child{
+		margin-left: 1.5rem !important;
+	}
+}
+.container .tel{
+	color:#ff6949;
+}
+.container>ul.nav>li{
+	font-size: 0.8rem;
+}
+.container>ul.nav>li:nth-child(6){
+	margin-left: 16rem;
+}
+.container>ul.nav>li a:hover{
+	color: #ff6949 !important;
+}
+.container>nav.navbar>div>ul>li a{
+	color:#888c90 !important;
+}
+.container>nav.navbar>div>.navbar-nav>.dropdown>.dropdown-menu{
+	min-width: 9rem;
+	left: -0.9rem !important;
+	border:1px solid transparent !important;
+	box-shadow: 0 3px 8px #999;
+}
+.container>nav.navbar>img{
+	margin-right: 6rem;
+}
+.container>nav.navbar a:hover{
+	color:rgb(255,105,73) !important;
+}
+.container>nav.navbar>div>ul>li:last-child{
+	margin-left: 10.2rem;
+}
+
+.active{
+	color:#ed6948;
+}

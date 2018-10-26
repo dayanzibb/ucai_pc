@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/toTop.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/vue-router.js"></script>
+
+</head>
+<body>
+	<!-- 头部 -->
+	<header id="header"></header>
+	<!--轮播图-->
+	<div id="lunbo" class="container-fluid carousel" data-ride="carousel">
+		<!--指示符-->
+		<ul class="carousel-indicators">
+			<li data-target="#lunbo" data-slide-to="0" class="active"></li>
+			<li data-target="#lunbo" data-slide-to="1"></li>
+			<li data-target="#lunbo" data-slide-to="2"></li>
+			<li data-target="#lunbo" data-slide-to="3"></li>
+		</ul>
+		<!--轮播图-->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img :src="list[0]"/>
+			</div>
+			<div class="carousel-item">
+				<img :src="list[1]"/>
+			</div>
+			<div class="carousel-item">
+				<img :src="list[2]"/>
+			</div>
+			<div class="carousel-item">
+				<img :src="list[3]"/>
+			</div>
+		</div>
+		<!--左右按钮-->
+		<a href="#lunbo" class="carousel-control-prev" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a href="#lunbo" class="carousel-control-next" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+		<!--左边导航-->
+		<div class="container position-relative" id="left-nav">
+			<div class="nav text-white nav-left float-left">
+				<div class="nav-item" data-toggle=tab name="#d1"><span class="nav-link pt-3">前端全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d2"><span class="nav-link pt-3">UI全栈</span></div>
+				<div class="nav-item li_3" data-toggle=tab name="#d3"><span class="nav-link pt-3">Java全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d4"><span class="nav-link pt-3">Android全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d5"><span class="nav-link pt-3">PHP全栈</span></div>
+				<div class="nav-item ml-0" data-toggle=tab name="#d6"><span class="nav-link pt-3">大数据全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d7"><span class="nav-link pt-3">游戏CG全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d8"><span class="nav-link pt-3">人工智能全栈</span></div>
+				<div class="nav-item" data-toggle=tab name="#d9"><span class="nav-link pt-3">VR全栈</span></div>
+			</div>
+			<div class="float-left nav-right d3 position-relative">
+				<div id="d1">
+					<div class="float-left">
+						<div class="text-center">
+							<img src="img/h5_menu.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">前端H5就业培训班</a></p>
+							<p class="m-0 mt-2 text-muted small">双保就业 工资八千起</p>
+						</div>
+						<div class="text-center">
+							<img src="img/h5_js.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">JavaScript在职提高班</a></p>
+							<p class="m-0 mt-2 text-muted small">小班开课 名师亲授</p>
+						</div>
+					</div>
+					<div class="float-left  pl-4">
+						<p class="m-0 mt-4 p-color"><a href="#">相关课程</a></p>
+						<p class="m-0 mt-1"><a href="#" class="text-muted">HTML5开发&nbsp;/&nbsp;前端开发&nbsp;/&nbsp;网页三剑客</a></p>
+						<p class=" m-0 mt-5 p-color"><a href="#">课程推荐</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;浏览器渲染那些事</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;React前端页面开发</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;Nodejs+Express+Mongodb+Mocha环境...</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;百度地图的前端显示</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;项目设计及使用JavaScript制作网络爬虫</a></p>
+					</div>
+				</div>
+				<div id="d2">
+					<div class="float-left">
+						<div class="text-center">
+							<img src="img/php-course.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">UI设计就业培训班</a></p>
+							<p class="m-0 mt-2 text-muted small">UI全栈设计师 聚焦设计 关注未来</p>
+						</div>
+						<div class="text-center">
+							<img src="img/php-course2.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">UI设计在职提高班</a></p>
+							<p class="m-0 mt-2 text-muted small">正在筹备中...</p>
+						</div>
+					</div>
+					<div class="float-left  pl-4">
+						<p class="m-0 mt-4 p-color"><a href="#">相关课程</a></p>
+						<p class="m-0 mt-1"><a href="#" class="text-muted">UI设计&nbsp;/&nbsp;三维设计</a></p>
+						<p class=" m-0 mt-5 p-color"><a href="#">课程推荐</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;商业海报制作</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;帧动画和视频动画制作</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;画笔工具组、人像合成</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;UI项目实战-快速打造隐私相册写实图标</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;第125讲 人像后期处理技法一</a></p>
+					</div>
+				</div>
+				<div id="d3"><img src="img/java.png"/></div>
+				<div id="d4">
+					<div class="float-left">
+						<div class="text-center">
+							<img src="img/andrio.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">Android就业培训班</a></p>
+							<p class="m-0 mt-2 text-muted small">学全栈 战高薪 就业八千起</p>
+						</div>
+						<div class="text-center">
+							<img src="img/andrio2.png" class="mt-4"/>
+							<p class="m-0 mt-3"><a href="#" class="text-dark">Android在职提高班</a></p>
+							<p class="m-0 mt-2 text-muted small">正在筹备中...</p>
+						</div>
+					</div>
+					<div class="float-left  pl-4">
+						<p class="m-0 mt-4 p-color"><a href="#">相关课程</a></p>
+						<p class="m-0 mt-1"><a href="#" class="text-muted">Android开发&nbsp;/&nbsp;Android游戏&nbsp;/&nbsp;Java开发</a></p>
+						<p class=" m-0 mt-5 p-color"><a href="#">课程推荐</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;第三讲：Android项目实战-蓝牙项目</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;第七讲：Android项目实战-蓝牙项目的搭建</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;第七讲：Android项目实战-版本控制</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;24小时速成Android开发：登陆页面的布局...</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;24小时速成Android开发：考试主窗口布局...</a></p>
+					</div>
+				</div>
+				<div id="d5">
+					<div class="float-left">
+						<div class="text-center">
+							<img src="img/php-course3.png" class="mt-4"/>
+							<p class="m-0"><a href="#" class="text-dark">PHP就业培训班</a></p>
+							<p class="m-0 mt-2 text-muted small">学全栈 战高薪 就业八千起</p>
+						</div>
+						<div class="text-center">
+							<img src="img/php-course4.png" class="mt-4"/>
+							<p class="m-0 mt-3"><a href="#" class="text-dark">Web全栈在职提高班</a></p>
+							<p class="m-0 mt-2 text-muted small">火热报名中...</p>
+						</div>
+					</div>
+					<div class="float-left  pl-4">
+						<p class="m-0 mt-4 p-color"><a href="#">相关课程</a></p>
+						<p class="m-0 mt-1"><a href="#" class="text-muted">PHP开发&nbsp;/&nbsp;页面架构师&nbsp;/&nbsp;C/C++开发&nbsp;/&nbsp;计算机网络&nbsp;/&nbsp;后端运维&nbsp;/&nbsp;Java Web开发&nbsp;/&nbsp;数据库</a></p>
+						<p class=" m-0 mt-5 p-color"><a href="#">课程推荐</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;多线程多进程那些事</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;加密解密那些事(上)</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;加密解密那些事(下)</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;文件上传那些事</a></p>
+						<p class="m-0 mt-3"><a href="#" class="text-muted">初学者&nbsp;|&nbsp;快捷的数据处理工具与方法(上)</a></p>
+					</div>
+				</div>
+				<div id="d6"><img src="img/data.png"/></div>
+				<div id="d7"><img src="img/cggame.jpg"/></div>
+				<div id="d8"><img src="img/ai.png"/></div>
+				<div id="d9"><img src="img/vr.png"/></div>
+			</div>
+		</div>
+	</div>
+	<!--信息栏-->
+	<div class="container-fluid">
+		<div class="container bg-white">
+			<div class="d-flex justify-content-between" id="infor">
+				<div class="big-box py-4">
+					<div id="d1">
+						<span class="float-left"></span>
+						<a href="#" class="ml-2">
+							<span>在线学习平台</span>
+							<i class="ml-2">最热门的全栈直播平台</i>
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="big-box py-4">
+					<div id="d2">
+						<span class="float-left"></span>
+						<a href="#" class="ml-2">
+							<span>能力评估系统</span>
+							<i class="ml-2">先进的自动化评估系统</i>
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="big-box py-4">
+					<div id="d3">
+						<span class="float-left"></span>
+						<a href="#" class="ml-2">
+							<span>讲师顾问团队</span>
+							<i class="ml-2">集结业界一线专家大牛</i>
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="big-box py-4">
+					<div id="d4">
+						<span class="float-left"></span>
+						<a href="#" class="ml-2">
+							<span>开班信息一览</span>
+							<i class="ml-2">最新最热专业马上开班</i>
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="big-box py-4">
+					<div id="d5">
+						<span class="float-left"></span>
+						<a href="#" class="ml-2">
+							<span>免费职业规划</span>
+							<i class="ml-2">免费规划您的职业前程</i>
+						</a>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--h5全栈工程师-->
+		<div class="container" id="h5">
+			<div class="float-left box-1 pt-4">
+                <h2 class="text-white pb-2 mx-4 mb-3">H5<br>全栈工程师</h2>
+                <a href="#" class="ml-3">【面授】H5全栈精英就业课程</a>
+                <a href="#" class="ml-3">【直播】JS全栈高级课程</a>
+				<div class="light"></div>
+			</div>
+			<div class="float-left ml-3 d-flex justify-content-between flex-wrap">
+				<div class="box-2 pt-5 pl-4">
+                    <a href="#" class="text-white font-weight-bold">前端H5开发工程师就业班</a>
+                    <p><a href="#" class="text-white mt-1 font-weight-bold">缺口50万 前景无限 点击报名</a></p>
+				</div>
+				<div class="box-3 mt-3 box">
+					<img src="img/57c946fd0dc59.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">Nodejs+Express+Mongodb...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：前端</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">0人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-4 mt-3 box">
+					<img src="img/567a0bca364fa.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">HTML5 动画设计于页面构成</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：前端</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">6人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-left ml-3 box-m">
+				<div class="box-5 box">
+					<img src="img/57c9465cae6a9.jpg" class="w-100"/>
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">React前端页面开发</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：前端</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">0人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-6 mt-3 box">
+					<img src="img/567a093353f8e.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">第122讲 Web前端开发之DO...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：前端</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-4">109人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-right box-7">
+			<h6 class="pt-4 pl-3">H5社区交流<a href="#" class="ml-5 small text-muted">更多>></a></h6>
+			<ul class="list-unstyled px-3">
+					<li><div class="float-left mr-1"></div><a href="#" class="small">12 款优秀的 JavaScript MVC 框架评估</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">H5前端开发的流程有哪些</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">[转]Cordova,APPCan,DCloud,API</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">使用Google Closure Compiler</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">HTML5开发就业前景分析</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Web前端开发工程师入门须知</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Web前端开发学习的的五个误区</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">如何高效学习H5前端开发</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<!--UI/UE全栈工程师-->
+		<div class="container" id="UI">
+			<div class="float-left box-1 pt-4">
+                <h2 class="text-white pb-2 mx-4 mb-3">UI/UE<br>全栈工程师</h2>
+                <a href="#" class="ml-3">【面授】UI全栈精英课程</a>
+				<div class="light"></div>
+			</div>
+			<div class="float-left ml-3 d-flex justify-content-between flex-wrap">
+				<div class="box-2 pt-5 pl-4">
+                    <a href="#" class="text-white font-weight-bold">UI/UE全栈设计师就业班</a>
+                    <p><a href="#" class="text-white mt-1 font-weight-bold">UI中的实力派 点击报名</a></p>
+				</div>
+				<div class="box-3 mt-3 box">
+					<img src="img/57cd0d1946da0.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">商业海报制作</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：UI</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">9人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-4 mt-3 box">
+					<img src="img/567a0909bbb59.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">第125讲 人像后期处理技法—</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：UI</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">56人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-left ml-3 box-m">
+				<div class="box-5 box">
+					<img src="img/57cd1075e9a4d.jpg" class="w-100"/>
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">UI项目实战—快速打造隐私...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：UI</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">2人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-6 mt-3 box">
+					<img src="img/553621adefbc0.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">Photoshop 基础实战课</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：UI</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">14人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-right box-7">
+				<h6 class="pt-4 pl-3">UI/UE社区交流<a href="#" class="ml-4 small text-muted">更多>></a></h6>
+				<ul class="list-unstyled px-3">
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI1710-PS基础02作业分享</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">【PS案例】三步打造一个折纸图形...</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI设计和Web前端哪个好</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI设计师就业前景分析</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">学习UI设计 步入高薪一族</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI设计菜鸟如何入门</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI思维下的APP设计技巧</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">UI设计师面试技巧总结</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<!--PHP全栈工程师-->
+		<div class="container" id="PHP">
+			<div class="float-left box-1 pt-4">
+                <h2 class="text-white pb-2 mx-4 mb-3">PHP<br>全栈工程师</h2>
+                <a href="#" class="ml-3">【面授】PHP全栈精英课程</a>
+                <a href="#" class="ml-3">【直播】后端架构高级课程</a>
+				<div class="light"></div>
+			</div>
+			<div class="float-left ml-3 d-flex justify-content-between flex-wrap">
+				<div class="box-2 pt-5 pl-4">
+                    <a href="#" class="text-white font-weight-bold">PHP全栈开发工程师就业班</a>
+                    <p><a href="#" class="text-white mt-1 font-weight-bold">CEO授课 高薪就业 点击报名</a></p>
+				</div>
+				<div class="box-3 mt-3 box">
+					<img src="img/567a0dd176d84.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">PHP MySQL函数库</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：PHP</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">7人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-4 mt-3 box">
+					<img src="img/57cce3c613f3d.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">快捷的数据处理工具与方法(上)</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：PHP</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">0人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-left ml-3 box-m">
+				<div class="box-5 box">
+					<img src="img/57c95082a963e.jpg" class="w-100"/>
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">多线程多进程那些事</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：PHP</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">0人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-6 mt-3 box">
+					<img src="img/57cce3c613f3d.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">快捷的数据处理工具与方法(下)</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：PHP</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">0人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-right box-7">
+				<h6 class="pt-4 pl-3">PHP社区交流<a href="#" class="ml-4 small text-muted">更多>></a></h6>
+				<ul class="list-unstyled px-3">
+					<li><div class="float-left mr-1"></div><a href="#" class="small">编程面试的10大算法概念汇总</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">67篇PHP开发技术干货~</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Web全栈班学员学习笔记分享</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">优才学院全栈工程师课程的10大亮</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">优才学院价值近100,000,000元Web全栈高端社</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">优才学院：我们理解的全栈工程师</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">90%的PHP程序员看完这篇文...</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">web全栈工程师课程解读</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<!--Android全栈工程师-->
+		<div class="container" id="AND">
+			<div class="float-left box-1 pt-4">
+                <h2 class="text-white pb-2 mx-4 mb-3">Android<br>全栈工程师</h2>
+                <a href="#" class="ml-3">【面授】安卓全栈就业课程</a>
+				<div class="light"></div>
+			</div>
+			<div class="float-left ml-3 d-flex justify-content-between flex-wrap">
+				<div class="box-2 pt-5 pl-4">
+                    <a href="#" class="text-white font-weight-bold">Android开发工程师就业班</a>
+                    <p><a href="#" class="text-white mt-1 font-weight-bold">实力验证 月薪10000+ 点击报名</a></p>
+				</div>
+				<div class="box-3 mt-3 box">
+					<img src="img/57cd14de6de99.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">第103讲 Android App实现第...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：Android</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">98人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-4 mt-3 box">
+					<img src="img/545aded461cd8.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">第102讲 现在前端框架思想在...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：Android</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-4">112人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-left ml-3 box-m">
+				<div class="box-5 box">
+					<img src="img/567a0720c694a.jpg" class="w-100"/>
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">优才线下Android公开课：课...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：Android</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">2人正在学习</i></p>
+                     </div>
+				</div>
+				<div class="box-6 mt-3 box">
+					<img src="img/57ce3b3d869ff.jpg" class="w-100" />
+					<div class="box-over">
+						<a href="#">
+	                        <h5 class="ml-2 pt-1">【Android实战】需求分析...</h5>
+	                        <p class="my-0 ml-2">课程等级：初学者</p>
+	                        <p class="my-0 ml-2">课程分类：Android</p>
+	                    </a>
+                        <p class="mt-3 ml-2 pt-3"><a href="#">开始学习</a><i class="ml-5">16人正在学习</i></p>
+                     </div>
+				</div>
+			</div>
+			<div class="float-right box-7">
+				<h6 class="pt-4 pl-3">安卓社区交流<a href="#" class="ml-4 small text-muted">更多>></a></h6>
+				<ul class="list-unstyled px-3">
+					<li><div class="float-left mr-1"></div><a href="#" class="small">ReactiveX之操作符（Operators）和链</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">使用Volley上传头像图片</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Java中Stack的三种含义</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">基于Volley和DiskLruCache的缓存</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Volley系列(1)</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Android开发不得不知技巧</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">浅谈Android开发就业前景</a></li>
+					<li><div class="float-left mr-1"></div><a href="#" class="small">Android开发工程师的三大历练过</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<!-- 优秀毕业学员-->
+		<section id="Student">
+			<div class="container-fluid position-absolute" id="student-bg">
+				<h1 class="text-white text-center">优秀毕业学员</h1>
+			</div>
+			<div class="mark position-absolute"></div>
+		    <div class="container position-relative piv">
+		        <div class="row">
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">王鑫</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈二期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">创业中...</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">陈学明</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">iOS全栈第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州麦优网络科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">徐金波</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">iOS全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">杭州甘之草科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">陈红军</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">"Web全栈第二期学员"</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">创业中...</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">王谷峰</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">iOS全栈第二期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">时代光华 技术主管</span>
+			        			</div>
+		        			</div>
+		        		</div>  	
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">李茂安</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈四期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">美丽说</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">陈乐记</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">安科互联教育科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">黄炜</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州集兴德科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">梁思丹</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州傲享网络科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">冼沛兰</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">番薯信息科技有限公司</span>
+			        			</div>
+		        			</div>
+		        		</div>  	
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">杨晓伟</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">iOS全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">滴滴出行</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">陈捷</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第三期学员</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">杜晔</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">IBM架构师</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">郭振耀</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">锤子科技</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">周志</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第三期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">哈尔滨银行</span>
+			        			</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="row">
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">侯佳林</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">腾讯</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">龙婷</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广东比朗网络科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">周澍江</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">UI班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州虎鱼网络</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">古让治</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州塘游网络科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">赖坤奇</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第二期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州孜尔信息科技有限公司</span>
+			        			</div>
+		        			</div>
+		        		</div>  	
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">周梦康</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">阿里云</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">李焌贤</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">悦正信息</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">庄光秋</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">悦正信息</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">廖添华</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州速威科技</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">吴世武</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">民讯通</span>
+			        			</div>
+		        			</div>
+		        		</div>  	
+		        		<div class="col-md-4 p-0 m-0">
+		        			<div  class="float-left stu1">
+			        			<a href="#"></a>
+			        			<div class="position-relative pic-big">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">孙殿昱</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Web全栈第四期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">滴滴出行</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">郑浩楠</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">游戏盒子</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">周展鹏</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">品创互联</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">刘钊鸿</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">广州帷策智能科技有限公司</span>
+			        			</div>
+		        			</div>
+		        			<div class="float-left  stu2">
+		        				<a href="#"></a>
+		        				<div class="position-relative pic-small">
+			        				<table></table>
+		        					<span class="d-block text-center text-white font-weight-bold small">陈德灌</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">Android班第一期学员</span>
+		        					<span class="d-block text-center text-white font-weight-bold small">派奇商贸有限公司</span>
+			        			</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		    </div>
+		</section>
+	</div>
+	<!--Teacher权威推荐-->
+	<div class="container-fluid pt-5" id="Teacher">
+		<h2 class="text-center">权威推荐</h2>
+		<p class="text-center">被业界誉为“互联网核心技术岗位人才培养的摇篮”</p>
+		<div class="container clearfix pt-4 position-relative">
+			<ul class="list-unstyled d-flex justify-content-around">
+				<li class="text-center px-3 position-relative li_1">
+					<img src="img/dw.png" class="w-50"/>
+					<p class="mt-4">赵大伟</p>
+					<i class="lines"></i>
+					<p>《互联网思维独孤九剑》作者、传统企业互联网转型实战专家</p>
+					<div class="maskcont position-absolute px-3 d_1">
+                        <p>“互联网产业化”、“产业互联网化”是中国未来商业领域的主旋律，传统企业互联网转型将是未来二十年最主流商业机遇，“产业BAT”的发展将依赖于大量优秀的技术人才。UCAI是一个非常靠谱、值得信任的团队，其顶尖的师资和优质的学习源，将为传统企业互联网转型输送一批又一批优秀人才！</p>
+                    </div>
+				</li>
+				<li class="text-center px-3 position-relative li_2">
+					<img src="img/dennis.png" class="w-50"/>
+					<p class="mt-4">张平和</p>
+					<i class="lines"></i>
+					<p>原Yahoo 中国总经理、鼎晖投资合伙人</p>
+					<div class="maskcont position-absolute px-3 d_2">
+                        <p>UCAI团队集自身数年大型网站开发运维经验、自身对教育的热情，投入优秀职业人才的培养，精心打造的全栈工程师体系，很看好他们的培训体系和人才培养成果！期待学员在工作中的出彩表现，成为真正优秀的职场人才！</p>
+                    </div>
+				</li>
+				<li class="text-center px-3 position-relative li_3">
+					<img src="img/hj.png" class="w-50"/>
+					<p class="mt-4">杨旭</p>
+					<i class="lines"></i>
+					<p>和君集团高级合伙人副总裁</p>
+					<div class="maskcont position-absolute px-3 d_3">
+                        <p>适逢传统企业转型和升级的大时代，无论是做咨询，还是做快消，都得利用起大数据，拥抱移动互联网。互联网优秀人才，在可以看得见的将来都是稀缺人才，我充分相信，UCAI团队有实力能为我们培养更多优秀人才！</p>
+                    </div>
+				</li>
+				<li class="text-center px-3 position-relative li_4">
+					<img src="img/xy.png" class="w-50"/>
+					<p class="mt-4">赵新宇</p>
+					<i class="lines"></i>
+					<p>世界邦联合创始人、原中兴通讯人力总监</p>
+					<div class="maskcont position-absolute px-3 d_4">
+                        <p>世界邦是出境自助游的领先企业，企业快速发展，需要大量优秀人才的加入，市场的人才已经供不应求，UCAI的全栈工程师，正是符合企业实际需要的尤其是飞速成长中的创业企业所需要的人才！基于对UCAI团队的了解，我们将优先选择UCAI的全栈工程师！</p>
+                    </div>
+				</li>
+				<li class="text-center px-3 position-relative li_5">
+					<img src="img/cgt.png" class="w-50"/>
+					<p class="mt-4">陈广涛</p>
+					<i class="lines"></i>
+					<p>多贝网CEO</p>
+					<div class="maskcont position-absolute px-3 d_5">
+                        <p>多贝特别稀饭既懂后端又懂前端的全栈工程师，在关键产品上，这样的同学经常能爆发出原子弹一样的能量！UCAI是靠谱的全栈工程师培养基地，我相信UCAI的培训质量！</p>
+                    </div>
+				</li>
+			</ul>
+			<div class="owl-prev position-absolute">
+				<a href="#"><img src="img/prev.png"/></a>
+			</div>
+			<div class="owl-next position-absolute">
+				<a href="#"><img src="img/next.png"/></a>
+			</div>
+		</div>
+
+	</div>
+	<!--就业企业-->
+	<div class="container-fluid pt-5" id="Partner">
+		<h2 class="text-center">就业企业</h2>
+		<p class="text-center">合作互联网企业已达2000多家，其中战略合作知名企业已达200多家</p>
+		<div class="container mt-5">
+			<div class="d-flex flex-wrap part-img">
+				<div class="text-center mb-4">
+					<img src="img/part3.png" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/part7.png" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/part011.png" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/meitu.jpg" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/part9.png" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/guotai.jpg" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/qimai.jpg" />
+				</div>
+				<div class="text-center mb-4">
+					<img src="img/part04.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--学校信息-->
+	<div class="container-fluid py-4" id="xuexiao">
+		<div class="container">
+			<ul class="list-unstyled d-flex justify-content-between flex-wrap">
+				<li class="li_1"><a href="#"><span></span>教学与住宿环境</a></li>
+				<li class="li_2"><a href="#"><span></span>资质荣誉证书</a></li>
+				<li class="li_3"><a href="#"><span></span>定期技术沙龙</a></li>
+				<li class="li_4"><a href="#"><span></span>免费视频教程</a></li>
+				<li class="li_5"><a href="#"><span></span>免费职业规划</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--底部-->
+	<footer id="footer"></footer>
+	<div id="toTop"></div>
+	<script src="js/index.js"></script>
+	<script src="js/ajax.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/toTop.js"></script>
+</body>
+</html>

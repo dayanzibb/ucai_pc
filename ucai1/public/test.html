@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div#d1{
+            width: 200px;
+            height: 300px;
+            background: green;
+            overflow: hidden;
+        }
+        .d{
+            width: 40px;
+            height: 0px;
+            transform:rotateZ(30deg) translate(-120px,-160px);
+            background: linear-gradient(to right,rgba(255,255,255,.2),rgba(255,255,255,0));
+        }
+        div#d1:hover .d{
+            height: 800px;
+            transition:all .5s linear;
+            transform:rotateZ(30deg) translate(160px,0px);
+        }
+        #d2{
+            width:200px;
+            height:200px;
+            background: yellow;
+            margin-top: 200px;
+            position: relative;
+        }
+        .db{
+            width: 1px;
+            height: 1px;
+            background: red;
+            position:absolute;
+            left:100px;
+            top:-10px;
+            overflow: hidden;
+            transition:all 1s linear;
+        }
+        #d2:hover .db{
+            transform-origin: center bottom;
+            transform: scale(100,100);
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div class="d"></div>
+    </div>
+    <hr/>
+    <div id="d2">
+        <div class="db"><p>222</p></div>
+    </div>
+</body>
+</html>

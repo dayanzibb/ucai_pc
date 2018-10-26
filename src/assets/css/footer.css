@@ -1,0 +1,54 @@
+#Footer>.container>ul:first-child>li{
+	width:2.2rem;
+	height: 2.2rem;
+	border-radius: 50%;
+}
+#Footer>.container>ul:first-child>li:first-child{
+	background: url(/img/tells.png) no-repeat 1px center;
+}
+#Footer>.container>ul:first-child>li:nth-child(2){
+	background: url(/img/tells.png) no-repeat -32px center;
+	position: relative;
+}
+#Footer>.container>ul:first-child>li:nth-child(2):hover p{
+	width: 140px;
+	height: 148px;
+	top:-148px;
+	left: -50px;
+	opacity: 1;
+}
+#Footer>.container>ul:first-child>li:nth-child(2)>p{
+	position: absolute;
+	width: 140px;
+	height: 0px;
+	top:0px;
+	left:-50px;
+	overflow: hidden;
+	opacity: 0;
+	transition:all .2s linear;
+
+}
+#Footer>.container>ul:first-child>li:last-child{
+	background: url(/img/tells.png) no-repeat -68px center;
+	position: relative;
+}
+
+#Footer>.container>ul:first-child>li:last-child:hover span{
+	width: 9rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	transform-origin: center 0;
+	z-index: 10;
+}
+#Footer>.container>ul:first-child>li:last-child>span{
+	position: absolute;
+	width: 0;
+	height: 2.2rem;
+	overflow: hidden;
+	background: #bfc6ca;
+	transition:all .1s linear;
+	z-index: -1;
+}
+#Footer>.container>ul:last-child{
+	border-bottom: 1px solid #e8e8e8;
+}

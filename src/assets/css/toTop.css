@@ -1,0 +1,64 @@
+/*右侧导航*/
+.sidebar{
+	right: 0;
+	bottom: 20px;
+	z-index: 999;
+}
+.sidebar>div{
+	position: relative;
+	width: 52px;
+	height:52px;
+	margin-bottom: 4px;
+	background: green;
+}
+.sidebar .wechat{
+	background: #d2d2d2 url(/img/sidebar_icon-v1.png) no-repeat 0 0;
+	
+}
+.sidebar .wechat:hover{
+	background: #55bb59 url(/img/sidebar_icon-v1.png) no-repeat 0 0;
+}
+.sidebar .wechat:hover div{
+	transform:translateX(-166px) ;	
+}
+.sidebar .wechat>div img{
+	width: 96px;
+	height:96px;
+}
+.sidebar .wechat>div{
+	left: 60px;
+	z-index: -1;
+	transition: transform 0.5s linear;	
+}
+.sidebar .zixun{
+	background: #d2d2d2 url(/img/sidebar_icon-v1.png) no-repeat 0 -52px;
+}
+.sidebar .zixun:hover div,
+.sidebar .download:hover div,
+.sidebar .return:hover div{
+	z-index: 100;
+	transform:translateX(-90px);			
+}
+.sidebar .zixun>div,
+.sidebar .download>div,
+.sidebar .return>div{
+	width: 140px;
+	height: 52px;
+	line-height: 52px;
+	z-index: -1;
+	transition: transform 0.5s linear;
+	background: #ea653c url(/img/sidebar_icon-v1.png) no-repeat 0 -52px;	
+}
+.sidebar .download>div{
+	background: #57c4fa url(/img/sidebar_icon-v1.png) no-repeat 0 -104px;
+}
+.sidebar .download{
+	background: #d2d2d2 url(/img/sidebar_icon-v1.png) no-repeat 0 -104px;
+}
+.sidebar .return{
+	display: none;
+	background: #d2d2d2 url(/img/sidebar_icon-v1.png) no-repeat 0 -156px;
+}
+.sidebar .return>div{
+	background: #f5bc41 url(/img/sidebar_icon-v1.png) no-repeat 0 -156px;
+}

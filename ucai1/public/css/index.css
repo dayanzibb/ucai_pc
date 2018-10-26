@@ -1,0 +1,927 @@
+/*banner样式*/
+#lunbo{
+	height: 450px;
+}
+#lunbo .carousel-inner img{
+	 margin:0 calc(50% - 960px);
+}
+#lunbo .container{
+	min-width: 1140px;
+	margin-top: -450px;
+}
+#lunbo div.nav-left{
+	width:240px;
+}
+#lunbo div.nav-right{
+	width: 900px;
+}
+#lunbo div.nav-left div{
+	width:240px;
+}
+#lunbo div.nav-left div>span{
+	height:50px;
+	background: #000 url(../img/right.png) no-repeat 200px center;
+	opacity: .5;
+	font-size: 16px;
+}
+#lunbo div.nav-left div>span:hover{
+	opacity: .6;
+}
+#lunbo div.d3 #d1,#lunbo div.d3 #d2,#lunbo div.d3 #d3,
+#lunbo div.d3 #d4,#lunbo div.d3 #d5,#lunbo div.d3 #d6,
+#lunbo div.d3 #d7,#lunbo div.d3 #d8,#lunbo div.d3 #d9{
+	width: 930px;
+	height: 450px;
+	background: #fafafa;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#lunbo div.d3 #d1 div:first-child div,
+#lunbo div.d3 #d2 div:first-child div,
+#lunbo div.d3 #d4 div:first-child div,
+#lunbo div.d3 #d5 div:first-child div{
+	width:228px;
+	height:225px;
+	background: #fff;
+}
+#lunbo div.d3 a{
+	font-size: 0.8rem;
+}
+#lunbo div.d3 .p-color>a{
+	font-size: 1rem;
+	color:#ed6948;
+}
+#lunbo div.d3 a:hover{
+	color:#ed6948 !important;
+}
+#lunbo div.d3 #d1 div:last-child,
+#lunbo div.d3 #d2 div:last-child,
+#lunbo div.d3 #d4 div:last-child,
+#lunbo div.d3 #d5 div:last-child{
+	width: 702px;
+	height: 450px;	
+}
+#lunbo div.d3 #d1 div:last-child{
+	background:url(../img/h5_bg.png) no-repeat right bottom;
+}
+#lunbo div.d3 #d2 div:last-child{
+	background:url(../img/ul_rb.png) no-repeat right bottom;
+}
+#lunbo div.d3 #d4 div:last-child{
+	background:url(../img/andrio_rb.png) no-repeat right bottom;
+}
+#lunbo div.d3 #d5 div:last-child{
+	background:url(../img/php_lr2.png) no-repeat right bottom;
+}
+#lunbo div.d3 #d1 div:first-child div:last-child,
+#lunbo div.d3 #d2 div:first-child div:last-child,
+#lunbo div.d3 #d4 div:first-child div:last-child,
+#lunbo div.d3 #d5 div:first-child div:last-child{
+	border-top: 1px solid #e9e9e9;
+}
+
+/*信息栏样式*/
+@media screen and (max-width:1400px){
+	/*优秀毕业学员*/
+	#Student .piv .pic-small{
+		left:-196px !important;
+	}
+}
+
+@media screen and (max-width:1200px) {
+	/*信息导航*/
+	#infor div.big-box>div>a>i{
+		display: none;
+	}
+	#infor div>a>span{
+		font-size: 18px !important;
+	}
+	/*h5全栈工程师*/
+	#h5 .box-7,#UI .box-7,#PHP .box-7,#AND .box-7{
+		display: none;
+	}
+}
+@media screen and (max-width:992px){
+	/*banner导航*/
+	#lunbo div.nav-left,#lunbo div.nav-right{
+		display: none;
+	}
+	#lunbo .container{
+		min-width: 0px !important;
+	}
+	/*优秀毕业学员*/
+	#Student{
+		display: none;
+	}
+}
+@media screen and (max-width:1200px ) and (min-width:992px) {
+	/*信息导航*/
+	#infor .big-box div{
+		padding:18px 16px !important;
+	}
+	/*Teacher权威推荐*/
+	#Teacher>.container>ul{
+		width:1590px !important;
+	}
+}
+@media screen and (max-width:991px ) and (min-width:768px) {
+	/*信息导航*/
+	#infor div.big-box>div>a{
+		margin-left: 0 !important;
+	}
+	#infor .big-box div{
+		padding:18px 0px !important;
+	}
+	/*h5全栈工程师*/
+	#h5 .box-1,#UI .box-1,#PHP .box-1,#AND .box-1{
+		display: none;
+	}
+	/*Teacher权威推荐*/
+	#Teacher>.container>ul{
+		width:1530px !important;
+	}
+}
+@media screen and (max-width:768px) and (min-width:576px){
+	/*Teacher权威推荐*/
+	#Teacher>.container>ul{
+		width:1800px !important;
+	}
+}
+@media screen and (max-width:576px){
+	/*Teacher权威推荐*/
+	#Teacher>.container>ul{
+		width:2200px !important;
+	}
+}
+@media screen and (max-width:768px) {
+	/*信息导航*/
+	#infor .big-box div{
+		padding:18px 4px !important;
+	}
+	#infor .big-box div>span{
+		margin-left: 30%;
+		margin-top: -10%;
+	}
+	#infor div.big-box>div>a{
+		float: left;
+	}
+	#infor div>a>span{
+		font-size: 16px !important;
+		float: none;
+	}
+	/*h5全栈工程师*/
+	#h5 .box-1,#h5 .box-m,#UI .box-1,#UI .box-m,#PHP .box-1,#PHP .box-m,#AND .box-1,#AND .box-m{
+		display: none;
+	}
+	/*学校信息*/
+	#xuexiao>.container>ul>li{
+		width: 50% !important;
+	}
+	/*就业企业*/
+	#Partner .part-img>div{
+		width: 50% !important;
+	}
+}
+#infor #d1,#infor #d2,#infor #d3,#infor #d4{
+	border-right:1px solid #ccc ;
+}
+#infor div.big-box>div>span{
+	width: 38px;
+	height: 36px;
+}
+#infor #d1>span{
+	background: url(../img/infor.png) no-repeat 0 center;
+}
+#infor #d2>span{
+	background: url(../img/infor.png) no-repeat -36px center;
+}
+#infor #d3>span{
+	background: url(../img/infor.png) no-repeat -74px center;
+}
+#infor #d4>span{
+	background: url(../img/infor.png) no-repeat -110px center;
+}
+#infor #d5>span{
+	background: url(../img/infor.png) no-repeat -148px center;
+}
+#infor .big-box{
+	width: 20%;
+	height: 100%;
+}
+#infor .big-box div{
+	padding:14px 28px 0;
+}
+#infor div a{
+	text-decoration: none;
+	line-height: 1.3rem;
+}
+#infor div>a>span{
+	font-size: 20px;
+	color:#534f4b;
+}
+#infor div>a>span:hover{
+	color: #ee7253;
+}
+#infor div.big-box:hover{
+	box-shadow: -1px 5px 6px 2px #e8e8e8;
+}
+#infor div i{
+	font-size: 12px;
+	font-style: normal;
+	color:#9a9fa4;
+}
+/*h5全栈工程师*/
+#h5,#UI,#PHP,#AND{
+	margin-top:70px;
+}
+#h5 .box-1,#h5 .box-7,
+#UI .box-1,#UI .box-7,
+#PHP .box-1,#PHP .box-7,
+#AND .box-1,#AND .box-7{
+	width: 218px;
+	height: 358px;
+}
+#h5 .light,
+#UI .light,
+#PHP .light,
+#AND .light{
+	width: 40px;
+	height: 0px;
+	transform:rotateZ(30deg) translate(-120px,-400px);
+	background: linear-gradient(to right,rgba(255,255,255,.2),rgba(255,255,255,0));
+}
+#h5 .box-1:hover .light,
+#UI .box-1:hover .light,
+#PHP .box-1:hover .light,
+#AND .box-1:hover .light{
+	height: 800px;
+	transition:all .5s linear;
+	transform:rotateZ(30deg) translate(160px,0px);
+}
+#h5 .box-1,
+#UI .box-1,
+#PHP .box-1,
+#AND .box-1{
+	overflow: hidden;
+}
+#h5 .box-1{
+	background: url(../img/h5.png);
+}
+#UI .box-1{
+	background: url(../img/ui.png);
+}
+#PHP .box-1{
+	background: url(../img/php.png);
+}
+#AND .box-1{
+	background: url(../img/and.png);
+}
+#h5 .box-1>h2,
+#UI .box-1>h2,
+#PHP .box-1>h2,
+#AND .box-1>h2{
+	font-size: 30px;
+	border-bottom: 1px solid #fff;
+}
+#h5 .box-1>a,
+#UI .box-1>a,
+#PHP .box-1>a,
+#AND .box-1>a{
+	font-size: 14px;	
+	text-decoration: none;
+}
+#h5 .box-1>a{
+	color:#b10f53;
+}
+#UI .box-1>a{
+	color:#b0501b;
+}
+#PHP .box-1>a{
+	color: #0994a1;
+}
+#AND .box-1>a{
+	color: #24ac34;
+}
+#h5 .box-1>a:hover,
+#UI .box-1>a:hover,
+#PHP .box-1>a:hover,
+#AND .box-1>a:hover{
+	color:#811d40;
+}
+#h5 .box-7,
+#UI .box-7,
+#PHP .box-7,
+#AND .box-7{
+	border-top:1px solid #f08368;
+}
+#h5 .box-1,#h5 .box-2,#h5 .box-3,#h5 .box-4,#h5 .box-5,#h5 .box-6,#h5 .box-7,
+#UI .box-1,#UI .box-2,#UI .box-3,#UI .box-4,#UI .box-5,#UI .box-6,#UI .box-7,
+#PHP .box-1,#PHP .box-2,#PHP .box-3,#PHP .box-4,#PHP .box-5,#PHP .box-6,#PHP .box-7,
+#AND .box-1,#AND .box-2,#AND .box-3,#AND .box-4,#AND .box-5,#AND .box-6,#AND .box-7{
+	box-shadow: 0 4px 6px #e8e8e8;
+}
+#h5 .box-1:hover,#h5 .box-2:hover,#h5 .box-3:hover,#h5 .box-4:hover,#h5 .box-5:hover,#h5 .box-6:hover,#h5 .box-7:hover,
+#UI .box-1:hover,#UI .box-2:hover,#UI .box-3:hover,#UI .box-4:hover,#UI .box-5:hover,#UI .box-6:hover,#UI .box-7:hover,
+#PHP .box-1:hover,#PHP .box-2:hover,#PHP .box-3:hover,#PHP .box-4:hover,#PHP .box-5:hover,#PHP .box-6:hover,#PHP .box-7:hover,
+#AND .box-1:hover,#AND .box-2:hover,#AND .box-3:hover,#AND .box-4:hover,#AND .box-5:hover,#AND .box-6:hover,#AND .box-7:hover{
+	box-shadow: 0 6px 8px #ccc;
+}
+#h5 div:nth-child(2),
+#UI div:nth-child(2),
+#PHP div:nth-child(2),
+#AND div:nth-child(2){
+	width: 444px;
+	height: 358px;
+}
+#h5 div:nth-child(3),
+#UI div:nth-child(3),
+#PHP div:nth-child(3),
+#AND div:nth-child(3){
+	width: 210px;
+	height: 358px;
+}
+#h5 .box-2{
+	width: 444px !important;
+	height: 168px !important;
+	background: url(../img/course_h5.png);
+}
+#UI .box-2{
+	width: 444px !important;
+	height: 168px !important;
+	background: url(../img/course_ui.png);
+}
+#PHP .box-2{
+	width: 444px !important;
+	height: 168px !important;
+	background: url(../img/course_php.png);
+}
+#AND .box-2{
+	width: 444px !important;
+	height: 168px !important;
+	background: url(../img/course_and.png);
+}
+#h5 .box-2>a,
+#UI .box-2>a,
+#PHP .box-2>a,
+#AND .box-2>a{
+	font-size: 22px;
+	text-decoration: none;
+}
+
+#h5 .box-3,#h5 .box .box-over,
+#UI .box-3,#UI .box .box-over,
+#PHP .box-3,#PHP .box .box-over,
+#AND .box-3,#AND .box .box-over{
+	width: 210px !important;
+	height: 168px !important;
+}
+#h5 .box,#UI .box,#PHP .box,#AND .box{
+	overflow: hidden;
+}
+#h5 .box:hover .box-over,
+#UI .box:hover .box-over,
+#PHP .box:hover .box-over,
+#AND .box:hover .box-over{
+	opacity: .9;
+	transform: translateY(-118px);
+}
+#h5 .box .box-over,
+#UI .box .box-over,
+#PHP .box .box-over,
+#AND .box .box-over{
+	background: white;
+	transition:transform 0.5s linear;
+}
+#h5 .box .box-over h5,
+#UI .box .box-over h5,
+#PHP .box .box-over h5,
+#AND .box .box-over h5{
+	font-size: 14px;
+	color: #434343;
+	line-height: 45px;
+}
+#h5 .box .box-over p,
+#UI .box .box-over p,
+#PHP .box .box-over p,
+#AND .box .box-over p{
+	color:#807F7F;
+	font-size: 14px;
+}
+#h5 .box .box-over p>a,
+#UI .box .box-over p>a,
+#PHP .box .box-over p>a,
+#AND .box .box-over p>a{
+	color:#ff6949;
+}
+#h5 .box-4,#UI .box-4,#PHP .box-4,#AND .box-4{
+	width: 210px !important;
+	height: 168px !important;
+}
+#h5 .box-5,#UI .box-5,#PHP .box-5,#AND .box-5{
+	width: 210px !important;
+	height: 168px !important;
+}
+#h5 .box-6,#UI .box-6,#PHP .box-6,#AND .box-6{
+	width: 210px !important;
+	height: 168px !important;
+}
+#h5 .box-7,#UI .box-7,#PHP .box-7,#AND .box-7{
+	background: #fff;
+}
+#h5 .box-7 ul li div,
+#UI .box-7 ul li div,
+#PHP .box-7 ul li div,
+#AND .box-7 ul li div{
+	width:4px;
+	height: 4px;
+	background: #898989;
+	border-radius: 50%;
+	margin-top: 17px;
+}
+#h5 .box-7 ul li,
+#UI .box-7 ul li,
+#PHP .box-7 ul li,
+#AND .box-7 ul li{
+	line-height: 35px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#h5 .box-7 h6,
+#UI .box-7 h6,
+#PHP .box-7 h6,
+#AND .box-7 h6{
+	color:#ff6949;
+}
+#h5 .box-7 ul li a,
+#UI .box-7 ul li a,
+#PHP .box-7 ul li a,
+#AND .box-7 ul li a{
+	color:#898989;
+}
+#h5 .box-7 ul li a:hover,
+#UI .box-7 ul li a:hover,
+#PHP .box-7 ul li a:hover,
+#AND .box-7 ul li a:hover{
+	color:#ff6949;
+}
+
+/*优秀毕业学员*/
+#Student{
+	margin-top: 70px;
+	background: url(../img/stu-left.jpg) no-repeat left,
+				url(../img/stu-right.jpg) no-repeat right;
+}
+#Student #student-bg{
+	height: 392px;
+	background:-webkit-linear-gradient(left top,rgba(56, 236, 175, .9) 0%,rgba(70, 226, 232, .7) 100%) !important;
+	z-index: 5;
+	/*pointer-events: none;*/
+}
+#Student .mark{
+	width: 100%;
+	height: 392px;
+	background: transparent;
+	z-index: 6;
+}
+#Student .piv{
+	min-width: 1140px;
+}
+#Student .piv:hover{
+	z-index: 100;
+}
+#Student #student-bg>h1{
+	line-height: 392px;
+}
+#Student .piv .row{
+	height: 196px;
+}
+#Student .piv .pic-big{
+	width: 196px;;
+	height: 196px;
+	background: -webkit-linear-gradient(left top,rgba(56, 236, 175, .9) 0%,rgba(70, 226, 232, .7) 100%);
+	left:195px;
+	display: none;	
+}
+#Student .piv .pic-small{
+	width: 196px;;
+	height: 98px;
+	background: -webkit-linear-gradient(left top,rgba(56, 236, 175, .9) 0%,rgba(70, 226, 232, .7) 100%);
+	left:97px;
+	z-index: 100;
+	display: none;
+}
+#Student .piv .stu1{
+	width: 196px;
+	height: 196px;
+}
+/*第一行*/
+#Student>div.piv>div:first-child>div:first-child>.stu1{
+	background: url(../img/black1_01.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>.stu1{
+	background: url(../img/black2_01.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>.stu1{
+	background: url(../img/black3_01.png) no-repeat;
+}
+
+/*第二行*/
+#Student>div.piv>div:last-child>div:first-child>.stu1{
+	background: url(../img/black4_01.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>.stu1{
+	background: url(../img/black5_01.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>.stu1{
+	background: url(../img/black6_01.png) no-repeat;
+}
+#Student .piv .stu2{
+	width:97px;
+	height: 98px;
+}
+/*第一行第一列*/
+#Student>div.piv>div:first-child>div>div:nth-child(2){
+	background: url(../img/black1_02.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(3){
+	background: url(../img/black1_03.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(4){
+	background: url(../img/black1_04.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(5){
+	background: url(../img/black1_05.png) no-repeat;
+}
+/*第一行第二列*/
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(2){
+	background: url(../img/black2_02.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(3){
+	background: url(../img/black2_03.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(4){
+	background: url(../img/black2_04.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(5){
+	background: url(../img/black2_05.png) no-repeat;
+}
+/*第一行第三列*/
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(2){
+	background: url(../img/black3_02.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(3){
+	background: url(../img/black3_03.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(4){
+	background: url(../img/black3_04.png) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(5){
+	background: url(../img/black3_05.png) no-repeat;
+}
+/*第二行第一列*/
+#Student>div.piv>div:last-child>div>div:nth-child(2){
+	background: url(../img/black4_02.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(3){
+	background: url(../img/black4_03.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(4){
+	background: url(../img/black4_04.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(5){
+	background: url(../img/black4_05.png) no-repeat;
+}
+/*第二行第二列*/
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(2){
+	background: url(../img/black5_02.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(3){
+	background: url(../img/black5_03.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(4){
+	background: url(../img/black5_04.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(5){
+	background: url(../img/black5_05.png) no-repeat;
+}
+/*第二行第三列*/
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(2){
+	background: url(../img/black6_02.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(3){
+	background: url(../img/black6_03.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(4){
+	background: url(../img/black6_04.png) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(5){
+	background: url(../img/black6_05.png) no-repeat;
+}
+/*第一行第一列*/
+#Student>div.piv>div:first-child>div>.stu1:hover{
+	background: url(../img/stu101.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(2):hover{
+	background: url(../img/stu102.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(3):hover{
+	background: url(../img/stu103.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(4):hover{
+	background: url(../img/stu104.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div>div:nth-child(5):hover{
+	background: url(../img/stu105.jpg) no-repeat;
+}
+/*第一行第二列*/
+#Student>div.piv>div:first-child>div:nth-child(2)>.stu1:hover{
+	background: url(../img/stu301.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(2):hover{
+	background: url(../img/stu302.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(3):hover{
+	background: url(../img/stu303.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(4):hover{
+	background: url(../img/stu304.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(2)>div:nth-child(5):hover{
+	background: url(../img/stu305.jpg) no-repeat;
+}
+/*第一行第三列*/
+#Student>div.piv>div:first-child>div:nth-child(3)>.stu1:hover{
+	background: url(../img/stu201.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(2):hover{
+	background: url(../img/stu202.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(3):hover{
+	background: url(../img/stu203.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(4):hover{
+	background: url(../img/stu204.jpg) no-repeat;
+}
+#Student>div.piv>div:first-child>div:nth-child(3)>div:nth-child(5):hover{
+	background: url(../img/stu205.jpg) no-repeat;
+}
+/*第二行第一列*/
+#Student>div.piv>div:last-child>div:first-child>.stu1:hover{
+	background: url(../img/stu401.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(2):hover{
+	background: url(../img/stu402.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(3):hover{
+	background: url(../img/stu403.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(4):hover{
+	background: url(../img/stu404.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div>div:nth-child(5):hover{
+	background: url(../img/stu405.jpg) no-repeat;
+}
+/*第二行第二列*/
+#Student>div.piv>div:last-child>div:nth-child(2)>.stu1:hover{
+	background: url(../img/stu_501.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(2):hover{
+	background: url(../img/stu502.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(3):hover{
+	background: url(../img/stu503.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(4):hover{
+	background: url(../img/stu504.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(2)>div:nth-child(5):hover{
+	background: url(../img/stu505.jpg) no-repeat;
+}
+/*第二行第三列*/
+#Student>div.piv>div:last-child>div:nth-child(3)>.stu1:hover{
+	background: url(../img/stu601.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(2):hover{
+	background: url(../img/stu602.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(3):hover{
+	background: url(../img/stu603.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(4):hover{
+	background: url(../img/stu604.jpg) no-repeat;
+}
+#Student>div.piv>div:last-child>div:nth-child(3)>div:nth-child(5):hover{
+	background: url(../img/stu605.jpg) no-repeat;
+}
+
+#Student .piv .stu1:hover .pic-big{
+	display: block;
+}
+#Student .piv .stu2:hover .pic-small{
+	display: block;
+}
+#Student .piv .pic-big span:nth-child(2){
+	margin-top: 50px;
+}
+#Student .piv .pic-small span:nth-child(2){
+	margin-top: 20px;
+}
+#Student .piv .pic-big span:last-child{
+	margin-top: 10px;
+}
+/*Teacher权威推荐*/
+#Teacher{
+	background: #fff8f2 !important;
+	padding-bottom: 80px;
+}
+#Teacher>h2{
+	color:#626262;
+}
+#Teacher>p{
+	color: #7d7d7d;
+}
+#Teacher>.container{
+	overflow: hidden;
+/*	border:1px solid red;*/
+}
+#Teacher>.container>ul{
+	width:1420px;
+	transition:all .5s linear;
+}
+
+#Teacher>.container>ul>li{
+	width: 245px;
+	height: 320px;
+	background: #fff;
+	padding-top: 36px;
+	box-shadow: 0 0 6px rgba(255,105,73,.23);
+}
+#Teacher>.container>ul>.li_1 .lines,
+#Teacher>.container>ul>.li_2 .lines,
+#Teacher>.container>ul>.li_3 .lines,
+#Teacher>.container>ul>.li_4 .lines,
+#Teacher>.container>ul>.li_5 .lines{
+	display: block;
+	width: 66px;
+	height: 2px;
+	margin:12px auto;
+	background: -webkit-linear-gradient(left top,#38ecaf,#46e2e8);;
+}
+.li_2 .lines{
+	background: -webkit-linear-gradient(left top,#56b8fc,#958bfb) !important;
+}
+.li_3 .lines{
+    background: -webkit-linear-gradient(left top,#fcc244,#ffa146) !important;
+}
+.li_4 .lines{
+    background: -webkit-linear-gradient(left top,#f974c2,#f47984) !important;
+}
+.li_5 .lines{
+    background: -webkit-linear-gradient(left,#e982f3,#ba90fc) !important;
+}
+#Teacher>.container>ul>li p:nth-child(2){
+	font-size: 18px;
+	color:#707070;
+}
+#Teacher>.container>ul>li p:nth-child(4){
+	font-size: 14px;
+	color:#707070;
+}
+#Teacher>.container>ul>.li_1 .maskcont,
+#Teacher>.container>ul>.li_2 .maskcont,
+#Teacher>.container>ul>.li_3 .maskcont,
+#Teacher>.container>ul>.li_4 .maskcont,
+#Teacher>.container>ul>.li_5 .maskcont{
+	width: 245px;
+	height: 0px;
+	font-size: 14px;
+	left: 0;
+	top:160px;
+	opacity: 0;
+	overflow: hidden;
+/*	transform:rotateX(90deg);*/
+	transition: all .2s linear;
+	background: -webkit-linear-gradient(left top,#38ecaf,#46e2e8);
+
+}
+#Teacher>.container>ul>.li_2 .maskcont{
+	background: -webkit-linear-gradient(left top,#56b8fc,#958bfb);;
+}
+#Teacher>.container>ul>.li_3 .maskcont{
+	background: -webkit-linear-gradient(left top,#fcc244,#ffa146);
+}
+#Teacher>.container>ul>.li_4 .maskcont{
+	background: -webkit-linear-gradient(left top,#f974c2,#f47984);
+}
+#Teacher>.container>ul>.li_5 .maskcont{
+	background: -webkit-linear-gradient(left,#e982f3,#9b96a5);
+}
+#Teacher>.container>ul>li .maskcont p{
+	line-height: 28px;
+	color: #fff;
+}
+#Teacher>.container>ul .li_1:hover .d_1,
+#Teacher>.container>ul .li_2:hover .d_2,
+#Teacher>.container>ul .li_3:hover .d_3,
+#Teacher>.container>ul .li_4:hover .d_4,
+#Teacher>.container>ul .li_5:hover .d_5{
+	/*transform:rotateX(0deg);*/
+	width: 245px;
+	height: 320px;
+	left: 0;
+	top:0;
+	opacity: .9;
+	padding-top: 26px;
+}
+#Teacher .owl-prev{
+	top:160px;
+	left: 0px;
+}
+#Teacher .owl-next{
+	top:160px;
+	right: 0px;
+}
+/*就业企业*/
+#Partner h2{
+	color:#626262;
+}
+#Partner p{
+	color:#7d7d7d;
+}
+#Partner .part-img>div{
+	width: 222px;
+	height: 96px;
+	line-height: 96px;
+}
+#Partner .part-img>div:hover{
+	background:#eee;
+}
+/*学校信息*/
+#xuexiao{
+	background: #fff !important;
+}
+#xuexiao>.container>ul>li{
+	width: 20%;
+	height: 40px;
+	border-left: 1px solid #dcdcdc;
+	text-align:center;
+	line-height: 40px;
+}#xuexiao>.container>ul .li_5{
+	border-right: 1px solid #dcdcdc;
+}
+#xuexiao>.container>ul>li>a{
+	color: #7d7d7d;
+}
+#xuexiao>.container>ul>li>a:hover{
+	color:#ee7253;
+}
+#xuexiao>.container>ul>li span{
+	margin-right: 10px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top:5px;
+}
+#xuexiao>.container>ul .li_1 span{
+	background: url(../img/foot_3.png) no-repeat;
+	transition: background .2s linear;
+}
+#xuexiao>.container>ul .li_1 a:hover span{
+	background: url(../img/foot_3.png) no-repeat 0 -24px;	
+}
+#xuexiao>.container>ul .li_2 span{
+	width: 20px;
+	background: url(../img/foot_3.png) no-repeat -24px 0px;
+	transition: background .2s linear;
+}
+#xuexiao>.container>ul .li_2 a:hover span{
+	background: url(../img/foot_3.png) no-repeat -24px -24px;	
+}
+#xuexiao>.container>ul .li_3 span{
+	background: url(../img/foot_3.png) no-repeat -44px 0px;
+	transition: background .2s linear;
+}
+#xuexiao>.container>ul .li_3 a:hover span{
+	background: url(../img/foot_3.png) no-repeat -44px -24px;	
+}
+#xuexiao>.container>ul .li_4 span{
+	background: url(../img/foot_3.png) no-repeat -68px 0px;
+	transition: background .2s linear;
+}
+#xuexiao>.container>ul .li_4 a:hover span{
+	background: url(../img/foot_3.png) no-repeat -68px -24px;	
+}
+#xuexiao>.container>ul .li_5 span{
+	background: url(../img/foot_3.png) no-repeat -96px 0px;
+	transition: background .2s linear;
+}
+#xuexiao>.container>ul .li_5 a:hover span{
+	background: url(../img/foot_3.png) no-repeat -96px -24px;	
+}
+
+
+

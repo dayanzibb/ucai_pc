@@ -1,0 +1,44 @@
+#login-box{
+    max-width: 420px;
+}
+#login-box div input.form-control{
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+}
+#login-box div span{
+	color:#59adfd !important;
+}
+#login-box div ul>li{
+	font-size: 0.9rem;
+}
+#login-box div input{
+	border-left: none;
+	font-size: 0.9rem;
+}
+#login-box div button{
+	padding:12px 0;
+}
+#login-box div button.btn-register{
+	background: #59adfd;
+}
+#login-box .other-accounts a{
+	width:30px;
+	height:30px;
+}
+#login-box .other-accounts span{
+	font-size: .9rem;
+	color: #535353;
+}
+#login-box .other-accounts a:nth-child(2){
+	background: url(/img/other_accounts_bg.png) no-repeat 0 0;
+}
+#login-box .other-accounts a:nth-child(3){
+	background: url(/img/other_accounts_bg.png) no-repeat -41px 0;
+}
+#login-box .other-accounts a:nth-child(4){
+	background: url(/img/other_accounts_bg.png) no-repeat -82px 0;
+}
+#login-box .other-accounts a:last-child{
+	background: url(/img/other_accounts_bg.png) no-repeat -123px 0;
+}
